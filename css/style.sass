@@ -1,0 +1,330 @@
+*
+	padding: 0
+	margin: 0
+	border: 0
+	transition: .7s ease-in-out
+	box-sizing: border-box
+*:before *:after
+	-moz-box-sizing: border-box
+	-webkit-box-sizing: border-box
+	box-sizing: border-box
+a:focus,a:active
+	outline: none
+nav,footer,header,aside
+	display: block
+html,body
+		height: 100%
+		width: 100%
+		font-size: 100%
+		line-height: 1
+		font-size: 14px
+		font-family: 'Raleway', sans-serif
+		-ms-text-size-adjust: 100%
+		-moz-text-size-adjust: 100%
+		-webkit-text-size-adjust: 100%
+		margin: 0 auto
+		outline: none
+input::-ms-clear
+	display: none
+input
+	&::-webkit-input-placeholder
+		color: grey
+		padding: 10px
+		text-overflow: ellipsis
+	&::-moz-placeholder
+		color: grey
+		padding: 10px
+		text-overflow: ellipsis
+	&:-ms-input-placeholder
+		color: grey
+		padding: 10px
+		text-overflow: ellipsis
+	&::-webkit-inner-spin-button
+		-webkit-appearance: none
+	&::-webkit-outer-spin-button
+		-webkit-appearance: none
+	&[type='number']
+		-moz-appearance: textfield
+button:active, button:focus
+	outline: none !important
+button::-moz-focus-inner
+	border: 0 !important
+button
+	cursor: pointer
+button::-moz-focus-inner
+	padding: 0
+	border: 0
+a,a:visited
+	text-decoration: none
+a:hover
+	text-decoration: none
+	outline: none !important
+video:active, video:focus
+	outline: none !important
+ul li
+	list-style: none
+h1,h2,h3,h4,h5,h6
+	font-size: inherit
+
+@mixin dflex
+	display: flex
+	align-items: center
+	justify-content: center
+
+::-webkit-scrollbar-track
+	background-color: transparent
+::-webkit-scrollbar-thumb
+	-webkit-border-radius: 15px
+	border-radius: 15px
+	background-color: #E0E9F2
+	background-position: center
+	background-repeat: no-repeat
+	&:hover
+		background-color: #999
+::-webkit-scrollbar
+	width: 3px
+//********first*block**********
+.wrapper
+	width: 100%
+	height: 100%
+	margin: 0 auto
+	display: flex
+	align-items: center
+	justify-content: space-around
+	flex-wrap: wrap
+.container__one, .container__two, .container__three
+	width: 573px
+	height: 707px
+	background-color: #F8FAFC
+	border-radius: 25px
+	margin: 20px 17px
+	@include dflex
+	flex-direction: column
+	&-top
+		width: 100%
+		display: flex
+		justify-content: space-around
+	&-new
+		width: 71px
+		height: 26px
+		background: linear-gradient(248.16deg, #EFBB37 -3.95%, #CF9E1F 109.44%)
+		box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1)
+		border-radius: 30px
+		@include dflex
+		p
+			color: #fff
+			font-family: SF UI Display
+			font-style: normal
+			font-weight: 500
+			font-size: 14px
+			line-height: 17px
+			text-transform: uppercase
+	&-image
+		width: 262px
+		height: 261px
+	&-photo
+		width: 100%
+		height: 100%
+		border-radius: 25px
+		background-image: url('../img/blueShampoo.png')
+		background-repeat: no-repeat
+		background-size: contain
+		&:hover
+			background-image: url('../img/blueShampooZoom.png')
+			z-index: 2
+	&-icon
+		@include dflex
+		width: 46px
+		height: 47px
+		background: #FFFFFF
+		box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1)
+		border-radius: 30px
+		transform: ease 1s all
+		&:hover
+			background: #F9FAFC
+			box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1)
+	&-bottom
+		margin-top: 20px
+	&-form
+		max-width: 483px
+		width: 100%
+		display: flex
+		flex-direction: column
+	&-name
+		font-family: SF UI Display
+		font-style: normal
+		font-weight: 500
+		font-size: 24px
+		line-height: 29px
+		color: #2C2C2C
+		text-align: center
+	&-text
+		width: 483px
+		height: 72px
+		font-family: SF UI Display
+		font-style: normal
+		font-weight: normal
+		font-size: 16px
+		line-height: 24px
+	&-select
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin-top: 20px
+	&-block
+		width: 258px
+		height: 30px
+		border-radius: 15px
+		background-color: #fff
+		color: #2C2C2C
+		display: flex
+		align-items: center
+		padding-left: 20px
+		position: relative
+		background-image: url('../img/VectorClose.png')
+		background-repeat: no-repeat
+		background-position: 95% 50%
+		cursor: pointer
+	&-list
+		width: 258px
+		height: 75px
+		background-color: #ffffff
+		position: absolute
+		top: 30px
+		left: 0
+		overflow-x: hidden
+		overflow-y: scroll
+		border-radius: 0 0 15px 15px !important
+		z-index: 2
+		display: none
+		&__label
+			padding-left: 20px
+			display: flex
+			align-items: center
+			cursor: pointer
+			position: relative
+			&:hover
+				background: #F3F8FC
+				border-radius: 0px 10px 10px 0px
+			p
+				position: absolute
+		&__color
+			width: 243px
+			height: 24px
+			display: flex
+			flex-direction: column
+			align-items: center
+			&[type="radio"]
+				opacity: 0
+				cursor: pointer
+	&-cost
+		font-family: SF UI Display
+		font-style: normal
+		font-weight: 600
+		font-size: 18px
+		line-height: 21px
+		color: #000
+	&-radio
+		display: flex
+		flex-direction: column
+		margin-top: 20px
+	&-label
+		display: block
+		position: relative
+		padding-left: 35px
+		margin-bottom: 12px
+		cursor: pointer
+		font-size: 22px
+		-webkit-user-select: none
+		-moz-user-select: none
+		-ms-user-select: none
+		user-select: none
+	&-size
+		font-family: SF UI Display
+		font-style: normal
+		font-weight: 500
+		font-size: 16px
+		line-height: 19px
+		margin-right: 15px
+		position: absolute
+		opacity: 0
+		cursor: pointer
+	&-checkmark
+		position: absolute
+		top: 0
+		left: 0
+		height: 22.5px
+		width: 22.5px
+		background-color: #DEDEDE
+		border-radius: 5px
+		&::after
+			content: ""
+			position: absolute
+			display: none
+	&-down
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin-top: 25px
+	&-counter
+		width: 92px
+		height: 39px
+		border-radius: 30px
+		background-color: #E2E9F0
+		display: flex
+		align-items: center
+		justify-content: space-around
+		&:hover
+			background: #D8E3EE
+			box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1)
+	&-minus, &-out, &-plus
+		ont-family: Roboto
+		font-style: normal
+		font-weight: normal
+		font-size: 20px
+		line-height: 23px
+		color: #2C2C2C
+		background-color: transparent
+	&-submit
+		width: 302px
+		height: 39px
+		color: #ffffff
+		border-radius: 30px
+		font-family: SF UI Display
+		font-style: normal
+		font-weight: 600
+		font-size: 18px
+		line-height: 21px
+		margin-right: 40px
+		background: linear-gradient(221.35deg, #EFBB37 -3.95%, #CF9E1F 109.44%)
+		&:hover
+			background: linear-gradient(221.35deg, #E9B32C -3.95%, #BF911A 109.44%)
+.container__two-photo
+	background-image: url('../img/goldShampoo.png')
+	background-repeat: no-repeat
+	background-size: contain
+	&:hover
+		background-image: url('../img/goldShampooZoom.png')
+		z-index: 2
+.container__three-photo
+	background-image: url('../img/whiteShampoo.png')
+	background-repeat: no-repeat
+	background-size: contain
+	&:hover
+		background-image: url('../img/whiteShampooZoom.png')
+		z-index: 2
+.show
+	display: block
+.container__one-label:hover input ~ .container__one-checkmark
+	background-color: #DEDEDE
+.container__one-label input:checked ~ .container__one-checkmark
+	background-color: #DEDEDE
+.container__one-label input:checked ~ .container__one-checkmark:after
+	display: block
+.container__one-label .container__one-checkmark:after
+	top: 12%
+	left: 12%
+	width: 17px
+	height: 17px
+	border-radius: 5px
+	background: linear-gradient(261.65deg, #EFBB37 -3.95%, #CF9E1F 109.44%)
